@@ -12,7 +12,7 @@
       class="rounded-lg overflow-hidden"
       arrows
     >
-      <img :src="item" class="w-full h-56 py-4" draggable="false" />
+      <NuxtImg :src="item.image" class="w-full h-56 py-4" draggable="false" />
     </UCarousel>
   </div>
 </template>
@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { ref, onMounted, defineProps } from "vue";
 
-const props = defineProps<{ items: string[] }>();
+const props = defineProps<{ items: { id: number; image: string }[] }>();
 
 const carouselRef = ref();
 

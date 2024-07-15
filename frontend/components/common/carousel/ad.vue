@@ -8,7 +8,9 @@
     indicators
     arrows
   >
-    <img :src="item.image" class="w-full h-64" draggable="false" />
+    <NuxtLink :to="item.id">
+      <NuxtImg :src="item.image" class="w-full h-64" draggable="false" />
+    </NuxtLink>
   </UCarousel>
 </template>
 
