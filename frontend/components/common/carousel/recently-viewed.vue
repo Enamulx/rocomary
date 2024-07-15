@@ -1,15 +1,20 @@
 <template>
-  <UCarousel
-    ref="carouselRef"
-    v-slot="{ item }"
-    :items="items"
-    :ui="{ item: 'basis-full' }"
-    class="rounded-lg overflow-hidden"
-    indicators
-    arrows
-  >
-    <img :src="item" class="w-full h-64" draggable="false" />
-  </UCarousel>
+  <div class="bg-white rounded-sm shadow-lg pl-4 p-2">
+    <p class="text-2xl font-semibold">Recently Viewed</p>
+    <UCarousel
+      ref="carouselRef"
+      v-slot="{ item }"
+      :items="items"
+      :ui="{
+        item: 'basis-full sm:basis-1/3 md:basis-1/6 lg:basis-1/9',
+        container: 'gap-12',
+      }"
+      class="rounded-lg overflow-hidden"
+      arrows
+    >
+      <img :src="item" class="w-full h-56 py-4" draggable="false" />
+    </UCarousel>
+  </div>
 </template>
 
 <script setup lang="ts">

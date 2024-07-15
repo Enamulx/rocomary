@@ -3,19 +3,19 @@
     ref="carouselRef"
     v-slot="{ item }"
     :items="items"
-    :ui="{ item: 'basis-full sm:basis-1/3 md:basis-1/4 md:basis-1/6' }"
+    :ui="{ item: 'basis-full' }"
     class="rounded-lg overflow-hidden"
+    indicators
     arrows
   >
-    hello
-    <img :src="item" class="w-full h-64" draggable="false" />
+    <img :src="item.image" class="w-full h-64" draggable="false" />
   </UCarousel>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, defineProps } from "vue";
 
-const props = defineProps<{ items: string[] }>();
+const props = defineProps<{ items: { id: number; image: string }[] }>();
 
 const carouselRef = ref();
 
