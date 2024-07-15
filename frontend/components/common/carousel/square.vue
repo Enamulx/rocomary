@@ -6,15 +6,13 @@
       v-slot="{ item }"
       :items="items"
       :ui="{
-        item: 'basis-1/9 ',
+        item: 'basis-full sm:basis-1/3 md:basis-1/6 lg:basis-1/11',
         container: 'gap-12',
       }"
       class="rounded-lg overflow-hidden"
       arrows
     >
-      <NuxtLink to="#">
-        <NuxtImg :src="item.image" class="h-56 py-4" draggable="false" />
-      </NuxtLink>
+      <NuxtImg :src="item.image" class="h-56 py-4" draggable="false" />
     </UCarousel>
   </div>
 </template>

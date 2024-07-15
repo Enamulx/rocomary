@@ -33,6 +33,9 @@ const recentImage = [
       <div class="py-4">
         <CommonCarouselRecentlyViewed :items="recentImage" />
       </div>
+      <div class="py-4">
+        <CommonCarouselSquare :items="recentImage" />
+      </div>
     </UContainer>
   </main>
 </template>
