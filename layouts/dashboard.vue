@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <div class="min-h-screen"><</div>
+  <h1>This is dashboard Page</h1>
 </template>

@@ -1,5 +1,9 @@
 <script setup></script>
 
 <template>
-  <slot />
+  <!-- Navbar -->
+  <PublicNavbar />
+  <NuxtPage />
+  <!-- Footer -->
+  <PublicFooter />
 </template>
