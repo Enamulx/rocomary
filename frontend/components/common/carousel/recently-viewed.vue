@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-sm shadow-lg pl-4 p-2">
-    <p class="text-2xl pb-2">Recently Viewed</p>
+    <p class="text-xl md:text-2xl pb-2">Recently Viewed</p>
 
     <UCarousel
       ref="carouselRef"

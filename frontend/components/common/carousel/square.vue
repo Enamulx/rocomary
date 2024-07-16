@@ -3,7 +3,8 @@
   <div class="bg-white rounded-sm shadow-lg pl-4 px-2 py-4">
     <!-- Title And Button -->
     <div class="flex pb-4 justify-between">
-      <p class="text-2xl font-medium">{{ title }}</p>
+      <p class="hidden md:block text-2xl font-medium">{{ title }}</p>
+      <p class="md:hidden text-xl font-medium">{{ title.slice(0, 16) }}...</p>
 
       <UButton v-if="buttonLink" label="View All" color="gray">
         <template #trailing>
@@ -25,7 +26,7 @@
       arrows
     >
       <!-- Product Card -->
-      <NuxtLink :to="item.link">
+      <NuxtLink :to="item.id">
         <div class="bg-gray-100">
           <NuxtImg
             :src="item.image"
