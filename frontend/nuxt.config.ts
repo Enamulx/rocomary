@@ -1,10 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/google-fonts"], // Installed Modules.
+  modules: ["@nuxt/ui", "@nuxt/image", "@nuxtjs/google-fonts"],
+
   colorMode: {
     preference: "light",
   },
+
   googleFonts: {
     families: {
       Roboto: true,

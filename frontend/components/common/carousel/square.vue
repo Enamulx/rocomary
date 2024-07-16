@@ -3,12 +3,18 @@
   <div class="bg-white rounded-sm shadow-lg pl-4 px-2 py-4">
     <!-- Title And Button -->
     <div class="flex pb-4 justify-between">
-      <p class="hidden md:block text-2xl font-medium text-black">{{ title }}</p>
-      <p v-if="title" class="md:hidden text-xl font-medium text-black">
+      <p class="hidden md:block text-2xl font-medium">{{ title }}</p>
+      <p v-if="title" class="md:hidden text-xl font-medium">
         {{ title.slice(0, 16) }}...
       </p>
 
-      <UButton v-if="buttonLink" label="View All" color="gray">
+      <UButton
+        v-if="buttonLink"
+        :to="buttonLink"
+        label="View All"
+        color="gray"
+        variant="solid"
+      >
         <template #trailing>
           <UIcon name="i-heroicons-arrow-right-20-solid" class="w-5 h-5" />
         </template>
@@ -35,7 +41,7 @@
             class="h-36 w-44 bg-gray-200"
             draggable="false"
           />
-          <p class="border text-center border-t-0 py-1 px-2 text-black">
+          <p class="border text-center border-t-0 py-1 px-2">
             {{ item.productName.slice(0, 20) }}...
           </p>
         </div>
@@ -52,18 +58,4 @@ const props = defineProps<{
   title: string;
   buttonLink: string;
 }>();
-
-const carouselRef = ref();
-
-onMounted(() => {
-  setInterval(() => {
-    if (!carouselRef.value) return;
-
-    if (carouselRef.value.page === carouselRef.value.pages) {
-      return carouselRef.value.select(0);
-    }
-
-    carouselRef.value.next();
-  }, 4000);
-});
 </script>
