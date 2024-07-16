@@ -8,7 +8,7 @@
     indicators
     arrows
   >
-    <NuxtLink to="item.id">
+    <NuxtLink to="#">
       <NuxtImg :src="item.image" class="w-full h-64" draggable="false" />
     </NuxtLink>
   </UCarousel>
