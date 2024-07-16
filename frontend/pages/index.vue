@@ -182,22 +182,168 @@ const recentImage = [
     link: "/recent11",
   },
 ];
+
+const products = [
+  {
+    id: "1",
+    preOrder: false,
+    canRead: false,
+    title: "Product 1",
+    image: "/home/products/product1.png",
+    offer: 20,
+    writer: "Author 1",
+    review: {
+      rating: 4,
+      count: 100,
+    },
+    stock: 50,
+    price: 100,
+    offerPrice: 80,
+  },
+  {
+    id: "2",
+    preOrder: false,
+    canRead: false,
+    title: "Product 2",
+    image: "/home/products/product2.png",
+    offer: 15,
+    writer: "Author 2",
+    review: {
+      rating: 5,
+      count: 150,
+    },
+    stock: 30,
+    price: 120,
+    offerPrice: 102,
+  },
+  {
+    id: "3",
+    preOrder: false,
+    canRead: false,
+    title: "Product 3",
+    image: "/home/products/product3.png",
+    offer: 10,
+    writer: "Author 3",
+    review: {
+      rating: 3,
+      count: 200,
+    },
+    stock: 20,
+    price: 90,
+    offerPrice: 81,
+  },
+  {
+    id: "4",
+    preOrder: false,
+    canRead: false,
+    title: "Product 4",
+    image: "/home/products/product4.png",
+    offer: 25,
+    writer: "Author 4",
+    review: {
+      rating: 4.5,
+      count: 250,
+    },
+    stock: 10,
+    price: 150,
+    offerPrice: 112.5,
+  },
+  {
+    id: "5",
+    preOrder: false,
+    canRead: false,
+    title: "Product 5",
+    image: "/home/products/product5.png",
+    offer: 5,
+    writer: "Author 5",
+    review: {
+      rating: 4,
+      count: 300,
+    },
+    stock: 60,
+    price: 110,
+    offerPrice: 104.5,
+  },
+  {
+    id: "5",
+    preOrder: false,
+    canRead: false,
+    title: "Product 5",
+    image: "/home/products/product5.png",
+    offer: 5,
+    writer: "Author 5",
+    review: {
+      rating: 4,
+      count: 300,
+    },
+    stock: 60,
+    price: 110,
+    offerPrice: 104.5,
+  },
+  {
+    id: "5",
+    preOrder: false,
+    canRead: false,
+    title: "Product 5",
+    image: "/home/products/product5.png",
+    offer: 5,
+    writer: "Author 5",
+    review: {
+      rating: 4,
+      count: 300,
+    },
+    stock: 60,
+    price: 110,
+    offerPrice: 104.5,
+  },
+  {
+    id: "5",
+    preOrder: false,
+    canRead: false,
+    title: "Product 5",
+    image: "/home/products/product5.png",
+    offer: 5,
+    writer: "Author 5",
+    review: {
+      rating: 4,
+      count: 300,
+    },
+    stock: 60,
+    price: 110,
+    offerPrice: 104.5,
+  },
+];
 </script>
 
 <template>
   <main class="bg-gray-100">
     <UContainer>
+      <!-- Advertisement -->
       <div class="py-4">
         <CommonCarouselAd :items="addImage" />
       </div>
+
+      <!-- Recently I view -->
       <div class="py-4">
         <CommonCarouselRecentlyViewed :items="recentImage" />
       </div>
+
+      <!-- Best Seller Square-->
       <div class="py-4">
         <CommonCarouselSquare
           buttonLink="/buttonLink"
           title="বেস্ট সেলার বিষয়"
           :items="bestSellerImage"
+        />
+      </div>
+
+      <!-- Products -->
+      <div class="py-4">
+        <CommonCarouselProducts
+          :items="products"
+          classList=""
+          buttonLink="/buttonLink"
+          title="সেরা ডিস্কাউন্ট এ বেস্টসেলার বই"
         />
       </div>
     </UContainer>

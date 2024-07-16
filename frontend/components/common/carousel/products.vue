@@ -5,10 +5,16 @@
     <div class="flex pb-4 justify-between">
       <p class="hidden md:block text-2xl font-medium text-black">{{ title }}</p>
       <p v-if="title" class="md:hidden text-xl font-medium text-black">
-        {{ title.slice(0, 16) }}...
+        {{ title?.slice(0, 16) }}...
       </p>
 
-      <UButton v-if="buttonLink" label="View All" color="gray">
+      <UButton
+        v-if="buttonLink"
+        :to="buttonLink"
+        label="View All"
+        color="white"
+        variant="solid"
+      >
         <template #trailing>
           <UIcon name="i-heroicons-arrow-right-20-solid" class="w-5 h-5" />
         </template>
@@ -35,8 +41,8 @@
             class="h-36 w-44 bg-gray-200"
             draggable="false"
           />
-          <p class="border text-center border-t-0 py-1 px-2 text-black">
-            {{ item.productName.slice(0, 20) }}...
+          <p class="border text-center border-t-0 py-1 px-2">
+            {{ item?.productName?.slice(0, 20) }}...
           </p>
         </div>
       </NuxtLink>
@@ -51,6 +57,7 @@ const props = defineProps<{
   items: { id: number; image: string; productName: string; link: string }[];
   title: string;
   buttonLink: string;
+  classList: string;
 }>();
 
 const carouselRef = ref();
