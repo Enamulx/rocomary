@@ -1,6 +1,6 @@
 <template>
   <!-- Body -->
-  <div class="bg-white rounded-sm shadow-lg pl-4 px-2 pt-4 pb-16">
+  <div class="bg-white rounded-sm shadow-lg pl-4 px-2 pt-4 pb-12">
     <!-- Title And Button -->
     <!-- {{ items[0] }} -->
     <div class="flex pb-4 justify-between">

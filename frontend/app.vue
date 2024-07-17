@@ -1,11 +1,3 @@
 <template>
-  <div class="font">
-    <NuxtLayout />
-  </div>
+  <NuxtLayout />
 </template>
-
-<style scoped>
-.font {
-  font-family: Lato, sans-serif, SiyamRupali;
-}
-</style>
