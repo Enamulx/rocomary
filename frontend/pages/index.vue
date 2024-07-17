@@ -207,7 +207,7 @@ const products = [
     productTitle:
       "Top Rated Bestseller Product by Author 2 with Huge Discount Now",
     image: "/Home/discounted-best-seller/dbs2.png",
-    offer: 15,
+
     writer: "Author 2",
     review: {
       rating: 5,
@@ -240,7 +240,7 @@ const products = [
     productTitle:
       "Highly Recommended Product by Author 4 with Excellent Reviews and Ratings",
     image: "/Home/discounted-best-seller/dbs4.png",
-    offer: 25,
+    offer: 0,
     writer: "Author 4",
     review: {
       rating: 4.5,
@@ -324,7 +324,7 @@ const products = [
     productTitle:
       "Popular and Affordable Bestseller Product 9 with Great Discounts",
     image: "/Home/discounted-best-seller/dbs9.png",
-    offer: 9,
+    offer: 0,
     writer: "Author 9",
     review: {
       rating: 4,

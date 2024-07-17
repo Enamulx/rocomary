@@ -78,6 +78,14 @@
             </div>
           </NuxtLink>
 
+          <!-- Offer -->
+          <UBadge
+            v-if="item.offer"
+            class="absolute"
+            :ui="{ rounded: 'rounded-full' }"
+            >{{ item.offer }}% off</UBadge
+          >
+
           <!-- Add To Cart -->
           <div
             class="w-full h-full absolute hidden group-hover:flex flex-col items-center justify-center"
@@ -133,7 +141,7 @@ const props = defineProps<{
     canRead: boolean;
     productTitle: string;
     image: string;
-    offer: number;
+    offer?: number;
     review: { rating: number; count: number };
     stock: number;
     price: number;
