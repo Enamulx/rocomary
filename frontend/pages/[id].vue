@@ -63,11 +63,15 @@ const reviews = [
       <!-- Details & Related Products -->
       <div class="md:grid grid-cols-7 bg-white">
         <!-- Details -->
-        <div class="bg-white md:col-span-5 md:p-8 p-4">
+        <div class="bg-white flex gap-8 md:col-span-5 md:p-8 p-4">
           <div class="w-[40%] flex flex-col gap-4 justify-center">
             <!-- Imgae -->
-            <div class="w-fit mx-auto border-2 p-8">
-              <img class="" src="/details-page/details-img.png" alt="Image" />
+            <div class="border-2 p-8">
+              <img
+                class="w-full"
+                src="/details-page/details-img.png"
+                alt="Image"
+              />
             </div>
             <!-- Buttons -->
             <div class="flex justify-center gap-1">
@@ -89,7 +93,31 @@ const reviews = [
               </UButton>
             </div>
           </div>
-          <div class="w-[60%]"></div>
+          <div class="w-[60%]">
+            <p class="text-xl">
+              {{ singleProduct.specification.title }}
+              <span class="text-lg text-gray-600"
+                >({{ singleProduct.coverType }})</span
+              >
+            </p>
+            <p class="text-gray-600 text-[15.68px]">
+              {{ singleProduct.title }}
+            </p>
+            <div>
+              <NuxtLink to="#" class="flex items-center gap-2 text-gray-600">
+                by
+                <p class="text-blue-500 text-sm">
+                  {{ singleProduct.author.name }}
+                </p>
+                ,
+              </NuxtLink>
+              <NuxtLink to="#" class="flex gap-2 text-gray-600">
+                <p class="text-blue-500 text-sm">
+                  {{ singleProduct.specification.translator.name }} (অনুবাদক)
+                </p>
+              </NuxtLink>
+            </div>
+          </div>
         </div>
 
         <!-- Related Products -->
@@ -98,5 +126,32 @@ const reviews = [
     </UContainer>
 
     <!-- Modal For Book Lovers -->
+    <UModal v-model="isOpen" prevent-close>
+      <UCard
+        :ui="{
+          ring: '',
+          divide: 'divide-y divide-gray-100 dark:divide-gray-800',
+        }"
+      >
+        <template #header>
+          <div class="flex items-center justify-between">
+            <h3
+              class="text-base font-semibold leading-6 text-gray-900 dark:text-white"
+            >
+              Modal
+            </h3>
+            <UButton
+              color="gray"
+              variant="ghost"
+              icon="i-heroicons-x-mark-20-solid"
+              class="-my-1"
+              @click="isOpen = false"
+            />
+          </div>
+        </template>
+
+        <div class="h-32"></div>
+      </UCard>
+    </UModal>
   </section>
 </template>
