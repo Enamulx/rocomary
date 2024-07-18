@@ -94,15 +94,19 @@ const reviews = [
             </div>
           </div>
           <div class="w-[60%]">
+            <!-- Book Name -->
             <p class="text-xl">
               {{ singleProduct.specification.title }}
               <span class="text-lg text-gray-600"
                 >({{ singleProduct.coverType }})</span
               >
             </p>
+            <!-- Book Title -->
             <p class="text-gray-600 text-[15.68px]">
               {{ singleProduct.title }}
             </p>
+
+            <!-- Writer and Translator -->
             <div>
               <NuxtLink to="#" class="flex items-center gap-2 text-gray-600">
                 by
@@ -117,6 +121,18 @@ const reviews = [
                 </p>
               </NuxtLink>
             </div>
+
+            <!-- Category -->
+            <div></div>
+            <!-- Rating and Review -->
+            <!-- How Many Users Want -->
+            <!-- Price -->
+            <!-- Stock -->
+            <!-- App Discount -->
+            <!-- Specification -->
+            <!-- Advice -->
+            <!-- Read Some page & and Add To Cart -->
+            <!-- Share and Add to BookList -->
           </div>
         </div>
 
